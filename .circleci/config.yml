@@ -58,11 +58,8 @@ jobs:
       - run:
           name: Ejecutar las Pruebas E2E
           command: ./gradlew clean test -Ddriver=chrome -Denvironment=qa aggregate report
-      - store_test_results:
-          path: target/site/serenity
-          when: always
       - store_artifacts:
-          path: target/site/serenity
+          path: target
           when: always
 
 workflows:
